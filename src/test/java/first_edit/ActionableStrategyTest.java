@@ -17,7 +17,7 @@ player Player = new player();
    }
     @Test
     void LootnegativeTest(){
-        Assertions.assertEquals("you hit the jackpot you got a gold coin",loot.action(Player,'t'));
+        Assertions.assertEquals("Invalid input",loot.action(Player,'t'));
 
     }
 
@@ -27,7 +27,7 @@ player Player = new player();
     }
     @Test
     void InteraactnegativeTest(){
-        Assertions.assertEquals("you touched the walls and discover a game pixel ",interaact.action(Player,'t'));
+        Assertions.assertEquals("Invalid input",interaact.action(Player,'t'));
     }
     @Test
     void exitPositiveTest(){
@@ -35,7 +35,7 @@ player Player = new player();
     }
     @Test
     void exitnegativeTest(){
-        Assertions.assertEquals("you made it to the end woooow i didnt like that ",exit.action(Player,'t'));
+        Assertions.assertEquals("Invalid input",exit.action(Player,'t'));
     }
 
 
