@@ -2,7 +2,7 @@ package first_edit;
 
 public class RoomFactoryMethod  {
 
-    public room makeRoom(String room,String name) {
+    public Room makeRoom(String room, String name) {
 
         if (room == null || room.isEmpty())
             return null;

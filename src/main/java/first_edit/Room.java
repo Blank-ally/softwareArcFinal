@@ -10,46 +10,46 @@ Room: An abstract class that contains a String field called name and six Room fi
 [-]A method named isValidDirection that accepts a char argument for the direction. If this Room is connected to another Room in the given direction, return true. Otherwise, return false.
 [x]Six setter methods -- one for each direction -- that accept a Room object and assign it to the appropriate field.
 */
-public abstract class room {
+public abstract class Room {
     String name;
-    room north;
-    room south;
-    room east;
-    room west;
-    room up;
-    room down;
+    Room north;
+    Room south;
+    Room east;
+    Room west;
+    Room up;
+    Room down;
     ActionableStrategy action;
 
-    public room(String name, ActionableStrategy action) {
+    public Room(String name, ActionableStrategy action) {
         this.name = name;
         this.action = action;
 
     }
-    public String performAction(player player, char input){
+    public String performAction(Player player, char input){
        return action.action(player,input);
     }
-    public void setEast(room east) {
+    public void setEast(Room east) {
         this.east = east;
     }
 
-    public void setSouth(room south) {
+    public void setSouth(Room south) {
         this.south = south;
     }
 
 
-    public void setUp(room up) {
+    public void setUp(Room up) {
         this.up = up;
     }
 
-    public void setWest(room west) {
+    public void setWest(Room west) {
         this.west = west;
     }
 
-    public void setDown(room down) {
+    public void setDown(Room down) {
         this.down = down;
     }
 
-    public room GetAdjoiningRoom(char roomCode) {
+    public Room getAdjoiningRoom(char roomCode) {
         switch (roomCode) {
             case 'n':
                 return north;
@@ -68,13 +68,13 @@ public abstract class room {
         }
     }
 
-    public void setNorth(room north) {
+    public void setNorth(Room north) {
         this.north = north;
     }
 
-    public abstract String GetDescription();
+    public abstract String getDescription();
 
-    public String GetExits() {
+    public String getExits() {
         String OpenDirection = "";
         if (north != null)
             OpenDirection += "North ";
@@ -91,12 +91,12 @@ public abstract class room {
         return OpenDirection;
     }
 
-    public String GetName() {
+    public String getName() {
         return name;
     }
 
-    public boolean IsValidDirection(char c) {
-        if (GetAdjoiningRoom(c) != null)
+    public boolean isValidDirection(char c) {
+        if (getAdjoiningRoom(c) != null)
             return true;
         else return false;
     }

@@ -8,13 +8,13 @@ import java.util.ArrayList;
 [x]A method named addToScore that accepts an int argument and adds it to the Player's score.
 [x]A method named getInventory that returns a String. The String should contain the contents of the Player's inventory list. If the inventory is empty, return a message that says so.
 [x]A method named getScore that return's the Player's score field (an int).*/
-public class player {
+public class Player {
 
     int score;
     ArrayList<String> Inventory = new ArrayList<String>();
     boolean isFinished = false;
 
-    public void AddToInventory(String inven) {
+    public void addToInventory(String inven) {
         Inventory.add(inven);
 
     }
@@ -24,7 +24,7 @@ public class player {
 
     }
 
-    public String GetInventory() {
+    public String getInventory() {
         if (Inventory.size() == 0 )
         return "Your inventory is currently empty ";
         else
@@ -32,7 +32,7 @@ public class player {
             return String.join(", ",Inventory);
     }
 
-    public int GetScore() {
+    public int getScore() {
         return score;
     }
 

@@ -1,6 +1,6 @@
 package first_edit;
 
-public class StartRoom extends room {
+public class StartRoom extends Room {
 
 
 
@@ -9,7 +9,7 @@ public class StartRoom extends room {
     }
 
     @Override
-    public String GetDescription() {
+    public String getDescription() {
         return "You are surrounded by blank white walls ";
     }
 }

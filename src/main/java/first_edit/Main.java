@@ -85,63 +85,66 @@ Only the driver class should perform input or output. Do not create Scanners or 
 
 Submit the URL of your GitHub repository.*/
         char input;
-       Scanner keyboard = new Scanner(System.in);
-         GameSingleton game = GameSingleton.getInstance();
-do {
-    System.out.println(game.GetcurrentRoomDescription());
-    System.out.println( "Exits: "+game.GetCurrentRoomExits());
-    System.out.print(">>");
-    input = keyboard.nextLine().toLowerCase(Locale.ROOT).charAt(0);
+        Scanner keyboard = new Scanner(System.in);
+        GameSingleton game = GameSingleton.getInstance();
+        do {
+            System.out.println(game.getcurrentRoomDescription());
+            System.out.println("Exits: " + game.getCurrentRoomExits());
+            System.out.print(">>");
+            input = keyboard.nextLine().toLowerCase(Locale.ROOT).charAt(0);
 
 
+            switch (input) {
+                case 'n':
+                    if (game.move('n') == false) {
+                        System.out.println("Sorry not a valid direction");
+                    }
+                    break;
+                case 's':
+                    if (game.move('s') == false) {
+                        System.out.println("Sorry not a valid direction");
+                    }
+                    break;
+                case 'd':
+                    if (game.move('d') == false) {
+                        System.out.println("Sorry not a valid direction");
+                    }
+                    break;
+                case 'e':
+                    if (game.move('e') == false) {
+                        System.out.println("Sorry not a valid direction");
+                    }
+                    break;
+                case 'w':
+                    if (game.move('w') == false) {
+                        System.out.println("Sorry not a valid direction");
+                    }
+                    break;
+                case 'u':
+                    if (game.move('u') == false) {
+                        System.out.println("Sorry not a valid direction");
+                    }
+                    break;
+                case 'v':
+                    System.out.println("Your inventory : " + game.getPlayerInventory());
+                    break;
+                case 'i':
+                    System.out.println(game.interactWithCurrentRoom(input));
+                    break;
+                case 'x':
+                    String temp = game.exitCurrentRoom(input);
+                    System.out.println("your score is: "+ game.getPlayerScore());
+                    System.out.println( "Inventory: "+ game.getPlayerInventory());
+                    System.out.println(temp);
 
-    switch(input){
-        case 'n':
-            if(game.move('n')==false){
-                System.out.println("Sorry not a valid direction");
-            }
-            break;
-        case 's':
-            if(game.move('s')==false){
-                System.out.println("Sorry not a valid direction");
-            }
-            break;
-        case 'd':
-            if(game.move('d')==false){
-                System.out.println("Sorry not a valid direction");
-            }
-            break;
-        case 'e':
-            if(game.move('e')==false){
-                System.out.println("Sorry not a valid direction");
-            }
-            break;
-        case 'w':
-            if(game.move('w')==false){
-                System.out.println("Sorry not a valid direction");
-            }
-            break;
-        case 'u':
-            if(game.move('u')==false){
-                System.out.println("Sorry not a valid direction");
-            }
-            break;
-        case 'v':
-            System.out.println(game.GetPlayerInventory());
-            break;
-        case 'i':
-            System.out.println(game.InteractWithCurrentRoom(input));
-            break;
-        case 'x':
-            String temp = game.ExitCurrentRoom(input);
-            System.out.println(temp);
 
-            break;
-        case 'l':
-            System.out.println(game.LootCurrentRoom(input));
-            break;
-        default: System.out.println("Invalid input");
-    }
-}while(!game.isFinished());
+                    break;
+                case 'l':
+                    System.out.println(game.lootCurrentRoom(input));
+                    break;
+                default:
+                    System.out.println("Invalid input");
+            }
+        } while (!game.isFinished());
     }
 }

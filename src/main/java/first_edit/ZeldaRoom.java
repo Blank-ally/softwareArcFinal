@@ -1,6 +1,6 @@
 package first_edit;
 
-public class ZeldaRoom extends room  {
+public class ZeldaRoom extends Room {
 
 
     public ZeldaRoom(String name) {
@@ -9,7 +9,7 @@ public class ZeldaRoom extends room  {
     }
 
     @Override
-    public String GetDescription() {
+    public String getDescription() {
         return "The Grassy fields of Hyrule provide a warm an inviting air";
     }
 

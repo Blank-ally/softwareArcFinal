@@ -3,14 +3,12 @@ package first_edit;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.*;
-
 class ActionableStrategyTest {
     ActionableStrategy loot = new Loot();
     ActionableStrategy interaact = new Interact();
     ActionableStrategy exit = new Exit();
 
-player Player = new player();
+first_edit.Player Player = new Player();
    @Test
    void LootPositiveTest(){
        Assertions.assertEquals("you hit the jackpot you got a gold coin",loot.action(Player,'l'));
