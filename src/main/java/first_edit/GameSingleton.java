@@ -30,7 +30,7 @@ public class GameSingleton {
         return currentRoom.performAction(Player, input);
     }
 
-    public String getcurrentRoomDescription() {
+    public String getCurrentRoomDescription() {
         return currentRoom.getDescription();
 
     }

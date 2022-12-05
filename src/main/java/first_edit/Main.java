@@ -88,7 +88,7 @@ Submit the URL of your GitHub repository.*/
         Scanner keyboard = new Scanner(System.in);
         GameSingleton game = GameSingleton.getInstance();
         do {
-            System.out.println(game.getcurrentRoomDescription());
+            System.out.println(game.getCurrentRoomDescription());
             System.out.println("Exits: " + game.getCurrentRoomExits());
             System.out.print(">>");
             input = keyboard.nextLine().toLowerCase(Locale.ROOT).charAt(0);

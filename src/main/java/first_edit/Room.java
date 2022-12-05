@@ -31,20 +31,18 @@ public abstract class Room {
     public void setEast(Room east) {
         this.east = east;
     }
-
-    public void setSouth(Room south) {
-        this.south = south;
-    }
-
-
-    public void setUp(Room up) {
-        this.up = up;
-    }
-
     public void setWest(Room west) {
         this.west = west;
     }
-
+    public void setNorth(Room north) {
+        this.north = north;
+    }
+    public void setSouth(Room south) {
+        this.south = south;
+    }
+    public void setUp(Room up) {
+        this.up = up;
+    }
     public void setDown(Room down) {
         this.down = down;
     }
@@ -68,9 +66,7 @@ public abstract class Room {
         }
     }
 
-    public void setNorth(Room north) {
-        this.north = north;
-    }
+
 
     public abstract String getDescription();
 

@@ -1,11 +1,11 @@
 package first_edit;
 
 public class UndertaleRoom extends Room {
-    private ActionableStrategy action ;
+
 
     public UndertaleRoom(String name) {
         super(name,new Interact());
-       ;
+
     }
 
 
