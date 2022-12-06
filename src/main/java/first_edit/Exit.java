@@ -7,7 +7,7 @@ public class Exit implements ActionableStrategy{
             player.addToScore(100);
             player.addToInventory("trophy");
             player.setIsFinished();
-            return "you made it to the end woooow i didnt like that ";
+            return "you made it to the end woooow I didn't like that ";
         }else
             return "Invalid input" ;
     }

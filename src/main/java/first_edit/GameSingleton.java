@@ -6,7 +6,7 @@ public class GameSingleton {
     private Room currentRoom;
     private static GameSingleton gamesingle_instance = null;
 
-    // private boolean isFinshed = false;
+
     private GameSingleton() {
 
         Player = new Player();
